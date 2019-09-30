@@ -45,14 +45,14 @@ public class Rectangle extends Figure {
         return "Rectangle_" + String.valueOf(this.number);
     }
 
-    @Override
+    /*@Override
     public void moveObj(int delta_x, int delta_y) {
         for(int i = 0; i < points.length; i++){
             points[i].x = points[i].x + delta_x;
             points[i].y = points[i].y + delta_y;
         }
         makeGraph();
-    }
+    }*/
 
     public int getType() {
         return type;

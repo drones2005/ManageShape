@@ -18,7 +18,8 @@ public abstract class Figure extends JComponent implements Serializable {
     public abstract void setExtremePoint(int x, int y); // фиксация фигуры
     public abstract int getCountClick(); // количество кликов для построения полигона; для эллипса и прямоугольника не используется
     public abstract String getNumberObj(); // получить номер фигуры
-    public abstract void moveObj(int delta_x, int delta_y); // передвинуть объект
+    //public abstract void moveObj(int delta_x, int delta_y); // передвинуть объект
+    public abstract void makeGraph(); // создание объекта фигуры
 
     // прорисовка фигуры
     public void draw(Graphics2D g2){
@@ -35,14 +36,13 @@ public abstract class Figure extends JComponent implements Serializable {
         }
         g2.draw(shape);
     }
-
-    // создание объекта фигуры
-    public void makeGraph(){
-        Polygon graph = new Polygon();
-        graph.addPoint(points[0].x, points[0].y);
-        graph.addPoint(points[1].x, points[1].y);
-        graph.addPoint(points[2].x, points[2].y);
-        shape = graph;
+    // передвинуть объект
+    public void moveObj(int delta_x, int delta_y) {
+        for(int i = 0; i < points.length; i++){
+            points[i].x = points[i].x + delta_x;
+            points[i].y = points[i].y + delta_y;
+        }
+        makeGraph();
     }
 
     public int getNumber() {return number;}

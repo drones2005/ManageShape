@@ -48,6 +48,7 @@ public class Ellipse extends Figure {
         return "Ellips_" + String.valueOf(this.number);
     }
 
+    /*
     @Override
     public void moveObj(int delta_x, int delta_y) {
         for(int i = 0; i < points.length; i++){
@@ -56,6 +57,7 @@ public class Ellipse extends Figure {
         }
         makeGraph();
     }
+    */
 
     public int getType() {
         return type;
