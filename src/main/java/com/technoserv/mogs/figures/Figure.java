@@ -36,6 +36,7 @@ public abstract class Figure extends JComponent implements Serializable {
         }
         g2.draw(shape);
     }
+
     // передвинуть объект
     public void moveObj(int delta_x, int delta_y) {
         for(int i = 0; i < points.length; i++){

@@ -8,7 +8,6 @@ import java.awt.geom.Ellipse2D;
 
 public class Ellipse extends Figure {
     private final int type = 0;
-    private Point[] points;
 
     public Ellipse(int x1, int y1, int x2, int y2, Color fillColor, Color borderColor, int number) {
         points = new Point[2];

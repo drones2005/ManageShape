@@ -5,7 +5,6 @@ import java.awt.geom.Rectangle2D;
 
 public class Rectangle extends Figure {
     private final int type = 4;
-    private Point[] points;
 
     public Rectangle(int x1, int y1, int x2, int y2, Color fillColor, Color borderColor, int number) {
         points = new Point[2];

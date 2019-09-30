@@ -6,7 +6,6 @@ import java.awt.event.MouseEvent;
 public class Triangle extends Figure {
     private final int type = 3;
 
-
     private int countClick;
 
     public Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color fillColor, Color borderColor, int number ) {
