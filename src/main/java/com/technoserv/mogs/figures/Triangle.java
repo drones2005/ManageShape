@@ -1,7 +1,6 @@
 package com.technoserv.mogs.figures;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
 
 public class Triangle extends Figure {
     private final int type = 3;

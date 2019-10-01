@@ -1,7 +1,8 @@
 package com.technoserv.mogs.panels;
 
-import com.technoserv.mogs.figures.Figure;
 import com.technoserv.mogs.settings.CurrentSettings;
+import com.technoserv.mogs.figures.Figure;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
@@ -17,8 +18,8 @@ public class MogsMenuBar extends JMenuBar {
     private MogsMap map;
     private Logger log;
 
-    public MogsMenuBar(CurrentSettings cs, MogsMap map, Logger log) {
-        this.log = log;
+    public MogsMenuBar(CurrentSettings cs, MogsMap map) {
+        this.log = LogManager.getLogger(MogsMenuBar.class);
         this.map = map;
 
         log.info("Создание меню: начало");

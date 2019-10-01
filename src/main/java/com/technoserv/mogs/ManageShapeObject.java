@@ -12,7 +12,8 @@ public class ManageShapeObject {
     private static CurrentSettings cs;
 
     public static void main(String[] args) throws IOException, NoSuchFieldException, IllegalAccessException {
-        Logger log = LogManager.getLogger("log4j2.xml");
+        //Logger log = LogManager.getLogger("log4j2.xml");
+        Logger log = LogManager.getLogger(ManageShapeObject.class);
 
         CurrentSettings cs = new CurrentSettings("config.properties", log);
 
@@ -22,11 +23,11 @@ public class ManageShapeObject {
         frame.setSize(cs.getWindow_width(), cs.getWindow_height());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        MogsMap map = new MogsMap(cs, log);
-        MogsMenuBar menuBar = new MogsMenuBar(cs, map, log);
-        MogsColorBar colorBar = new MogsColorBar(cs, log);
-        MogsToolBar toolBar = new MogsToolBar(cs, map, log);
-        MogsInfoBar infoBar = new MogsInfoBar(cs, map, log);
+        MogsMap map = new MogsMap(cs);
+        MogsMenuBar menuBar = new MogsMenuBar(cs, map);
+        MogsColorBar colorBar = new MogsColorBar(cs);
+        MogsToolBar toolBar = new MogsToolBar(cs, map);
+        MogsInfoBar infoBar = new MogsInfoBar(cs, map);
 
         frame.setJMenuBar(menuBar);
         frame.add(colorBar);

@@ -1,6 +1,7 @@
 package com.technoserv.mogs.panels;
 
 import com.technoserv.mogs.settings.CurrentSettings;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
@@ -15,9 +16,9 @@ public class MogsColorBar extends JToolBar {
     private int activeColor;
     private Logger log;
 
-    public MogsColorBar(CurrentSettings cs, Logger log) {
+    public MogsColorBar(CurrentSettings cs) {
+        this.log = LogManager.getLogger(MogsColorBar.class);
         this.cs = cs;
-        this.log = log;
 
         log.info("Создание панели цветов: начало");
         log.info("Координаты: (" + cs.getColorbar_offset_x() + "," + cs.getColorbar_offset_y() + "); w = " + cs.getColorbar_width() + ", h = " + cs.getColorbar_height());

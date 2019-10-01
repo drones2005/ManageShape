@@ -1,7 +1,6 @@
 package com.technoserv.mogs.draw;
 
 import  java.awt.*;
-import  java.awt.geom.*;
 import  java.awt.event.*;
 import  java.io.*;
 import  javax.swing.*;

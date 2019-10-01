@@ -5,6 +5,7 @@ import com.technoserv.mogs.figures.Rectangle;
 import com.technoserv.mogs.figures.Triangle;
 import com.technoserv.mogs.figures.Figure;
 import com.technoserv.mogs.settings.CurrentSettings;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
@@ -36,7 +37,8 @@ public class MogsMap extends JPanel{
     private Figure figure;
     private Logger log;
 
-    public MogsMap(final CurrentSettings cs, final Logger log) {
+    public MogsMap(final CurrentSettings cs) {
+        log = LogManager.getLogger(MogsMap.class);
         this.log = log;
         this.cs = cs;
         this.x = cs.getMap_offset_x();

@@ -1,10 +1,10 @@
 package com.technoserv.mogs.panels;
 
 import com.technoserv.mogs.settings.CurrentSettings;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
@@ -16,10 +16,11 @@ public class MogsInfoBar extends JToolBar {
     private JLabel cursorCoordLabel;
     private JLabel countObjectLabel;
 
-    public MogsInfoBar(CurrentSettings cs, final MogsMap map, Logger log) {
+    public MogsInfoBar(CurrentSettings cs, final MogsMap map) {
+        this.log = LogManager.getLogger(MogsInfoBar.class);
         this.cs = cs;
         this.map = map;
-        this.log = log;
+
 
         log.info("Создание панели информации: начало");
         log.info("Координаты: (" + cs.getInfobar_offset_x() + "," + cs.getInfobar_offset_y() + "); w = " + cs.getInfobar_width() + ", h = " + cs.getInfobar_height());
